@@ -1,0 +1,40 @@
+// {
+//     // Python ファイル用の設定
+//     "[python]": {
+//         // VS Code のフォーマッターとして Black Formatter 拡張を使う
+//         "editor.defaultFormatter": "ms-python.black-formatter",
+//         // ファイル保存時に自動でフォーマットする
+//         "editor.formatOnSave": true
+//     },
+//     // Python 拡張が提供するフォーマッター連携は無効にしておく
+//     "python.formatting.provider": "none",
+//     // black にコマンドライン引数を渡す場合（Black Formatter 拡張用）
+//     // "black-formatter.args": ["--line-length", "100"],
+//     // ...
+// }
+{
+    "files.trimTrailingWhitespace": true,
+    // "python.pythonPath": "~/miniconda3/bin/python", // 環境によって変える, 消しても大丈夫
+    "python.linting.enabled": true, // 文法チェックを行う
+    "python.linting.pylintEnabled": false, // pylint は使わない
+    "python.linting.pycodestyleEnabled": false, // pep8 は使わない
+    "python.linting.flake8Enabled": true, // 文法チェックにflake8 を使う
+    "python.linting.flake8Args": [ // flake8 の設定
+        "--ignore=E111, E121, E221, E114, E302, E402, W293, W503, W504"
+    ],
+    "python.formatting.provider": "none", // 自動整形に autopep8 を使う
+    "python.formatting.autopep8Args": [ // autopep8 の設定
+        "--indent-size=4",
+        "--ignore=E402"
+    ],
+    "[python]": {
+        "editor.tabSize": 4, // インデントレベルは「2」
+        "editor.formatOnSave": true, // 保存時に自動整形を行う
+        "editor.formatOnPaste": false, // ペースト時に自動整形を行わない
+        "editor.formatOnType": false,
+        "editor.defaultFormatter": "ms-python.black-formatter", // 入力後に自動整形を行わない
+    },
+    "files.associations": {
+        "plyconfig.json": "jsonc"
+    },
+}
