@@ -1,4 +1,4 @@
-# CS231 Notes and Assignments 1&2
+# CS231 Notes and Assignments 1,2,3
 
 ## Contents
 ### Fundamentals (Notes till Dec 22, 2022 & Assignment 1)
